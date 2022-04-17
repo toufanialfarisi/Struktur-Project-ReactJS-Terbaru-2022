@@ -1,14 +1,14 @@
 import React from "react";
-import { reducer, initialState } from "../reducer";
 import { useNavigate } from "react-router-dom";
 import * as API from "../api";
 import { Nav } from "../router";
+import { useProvider } from "../provider";
 
 function Index(props) {
   /**navigation */
   const navigate = useNavigate();
 
-  const [state, dispatch] = React.useReducer(reducer, initialState);
+  const { state, dispatch } = useProvider();
 
   React.useEffect(() => {
     /**get one data */
@@ -16,7 +16,7 @@ function Index(props) {
 
     /**get all data */
     API.getAllData(dispatch);
-  }, []);
+  }, [dispatch]);
 
   return (
     <React.Fragment>

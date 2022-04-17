@@ -6,7 +6,7 @@ function FirstPage() {
   const navigate = useNavigate();
   return (
     <React.Fragment>
-      <h1>This is Next Page</h1> <br />{" "}
+      <h1>This is First Page</h1> <br />{" "}
       <button onClick={() => navigate(Nav.secondPage)}>Next second page</button>
     </React.Fragment>
   );
