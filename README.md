@@ -1,4 +1,4 @@
-# Struktir Project
+# Struktur Project React JS terbaru tahun 2022
 
 ```
 ├───api
