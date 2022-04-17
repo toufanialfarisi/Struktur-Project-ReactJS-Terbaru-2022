@@ -1,12 +1,10 @@
 import { FETCH_SUCCESS, FETCH_FAILED, GET_ALL_POST } from "../constant";
 
 const initialState = {
-  counter: 0,
-  counter3: 0,
   loading: true,
   post: {},
-  error: "",
   posts: [],
+  error: "",
 };
 
 const reducer = (state, action) => {
