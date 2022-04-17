@@ -6,6 +6,7 @@
 ├───pages
 │   ├───firstPage
 │   └───secondPage
+├───provider
 ├───reducer
 └───router
 ```
