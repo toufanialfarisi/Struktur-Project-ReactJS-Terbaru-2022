@@ -2,6 +2,7 @@ import React from "react";
 import { reducer, initialState } from "../reducer";
 import { useNavigate } from "react-router-dom";
 import * as API from "../api";
+import { Nav } from "../router";
 
 function Index(props) {
   /**navigation */
@@ -20,7 +21,7 @@ function Index(props) {
   return (
     <React.Fragment>
       <h1>ROUTING PAGE</h1>
-      <button onClick={() => navigate("/first-page")}>Next Page</button>
+      <button onClick={() => navigate(Nav.firstPage)}>Next Page</button>
       <br />
       <h1>GET ONE DATA</h1>
       {state.loading ? "loading" : JSON.stringify(state.post)}

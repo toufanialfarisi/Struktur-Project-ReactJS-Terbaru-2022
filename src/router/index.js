@@ -2,17 +2,23 @@ import SecondPage from "../pages/secondPage";
 import Index from "../pages";
 import FirstPage from "../pages/firstPage";
 
+export const Nav = {
+  home: "/",
+  firstPage: "/first-page",
+  secondPage: "/second-page",
+};
+
 export const Routing = [
   {
-    path: "/",
+    path: Nav.home,
     element: <Index />,
   },
   {
-    path: "/first-page",
+    path: Nav.firstPage,
     element: <FirstPage />,
   },
   {
-    path: "/second-page",
+    path: Nav.secondPage,
     element: <SecondPage />,
   },
 ];
