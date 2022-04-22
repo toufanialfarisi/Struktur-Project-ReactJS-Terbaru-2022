@@ -1,10 +1,18 @@
-import { FETCH_SUCCESS, FETCH_FAILED, GET_ALL_POST } from "../constant";
+import {
+  FETCH_SUCCESS,
+  FETCH_FAILED,
+  GET_ALL_POST,
+  GET_FORM_TEXT,
+} from "../constant";
 
 const initialState = {
   loading: true,
   post: {},
   posts: [],
   error: "",
+  form: {
+    name: "",
+  },
 };
 
 const reducer = (state, action) => {
@@ -29,6 +37,13 @@ const reducer = (state, action) => {
         loading: false,
         posts: action.payload,
         error: "",
+      };
+    case GET_FORM_TEXT:
+      return {
+        ...state,
+        form: {
+          name: action.formData,
+        },
       };
     default:
       return state;

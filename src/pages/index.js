@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import * as API from "../api";
 import { Nav } from "../router";
 import { useProvider } from "../provider";
+import { GET_FORM_TEXT } from "../constant";
 
 function Index(props) {
   /**navigation */
@@ -18,8 +19,16 @@ function Index(props) {
     API.getAllData(dispatch);
   }, [dispatch]);
 
+  const handleChangeText = (e) => {
+    const { value, name } = e.target;
+    dispatch({ type: GET_FORM_TEXT, [name]: value });
+  };
+
   return (
     <React.Fragment>
+      <h1>INPUT FORM</h1>
+      <input type="text" name="formData" onChange={handleChangeText} />
+      <h3>{JSON.stringify(state.form)}</h3>
       <h1>ROUTING PAGE</h1>
       <button onClick={() => navigate(Nav.firstPage)}>Next Page</button>
       <br />
